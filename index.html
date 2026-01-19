@@ -160,6 +160,36 @@
     });
   </script>
 
+  <script>
+    const navLinks = document.querySelectorAll('.navbar a');
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+
+        // Only handle internal anchor links
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+
+          const targetSection = document.querySelector(targetId);
+          if (!targetSection) return;
+
+          const sectionTop =
+            targetSection.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarHeight;
+
+          window.scrollTo({
+            top: sectionTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+
   <!-- Fade between different images -->
   <script>
     const serviceImages = [
