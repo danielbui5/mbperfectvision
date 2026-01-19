@@ -1,67 +1,191 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Business Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MB Perfect Vision</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div class="banner">
 
-    </div> -->
-    <header class="navbar">
-        <img src="images/logo.png" class="logo">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <img src="images/logo_tranparent.png" class="logo" alt="Logo">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
 
-    <div class="content">
-        <h1 id="home">Text to introduce business</h1>
-        <p>For all industrial spray painting needs</p>
+  <!-- HOME -->
+  <section id="home" class="section banner">
+    <div class="overlay">
+      <h1>MB Perfect Vision</h1>
+      <p>Best quality service for your industrial spray painting needs</p>
     </div>
+  </section>
 
-    <section class="about-us">
-        <div class="row"> 
-            <div class="about-col">
-                <h1 id="about"> About us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ullam doloribus nulla repudiandae velit autem culpa earum ut delectus necessitatibus, ad, similique molestias molestiae ex ratione neque? Accusantium, quisquam exercitationem!</p>
-            </div>
-            <div class="about-col">
-                <img src="images/spray-booth-scaled.jpeg">
-            </div>
-        </div>  
-    </section>
+  <!-- ABOUT US (TEXT ONLY, CENTERED) -->
+  <section id="about" class="section about-us">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        MB Perfect Vision is a company that provides an efficient and quality 
+        spray painting service. Over time, the company has learned, developed 
+        and built a team with extensive experience and necessary skills to deliver 
+        high-quality products. Our team is dedicated to coninuous improvement and 
+        learning every day in order to better serve our customers.
+      </p>
+      <p>
+        Over the years, the company has served and earnt the trust of many business 
+        parters in the Northern Beaches area and all across Sydney.
+      </p>
+      <!-- <p>
+        Currently, we are able to serve clients such as cabinet makers, renovators, 
+        joiners, shop fit-out specialists, and resurfaced home kitchen projects, 
+        handling large volumes of work and ensuring on-time completion as required.
+      </p> -->
+    </div>
+  </section>
 
-    <hr color="#d9b99b" size="1px"/>
+  <!-- SERVICES -->
+  <section id="services" class="section services-us">
+    <div class="services-container">
 
-    <section class="services">
-        <div class="row">
-            <div class="services-col">
-                <h1 id="services"> Service 1</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ullam doloribus nulla repudiandae velit autem culpa earum ut delectus necessitatibus, ad, similique molestias molestiae ex ratione neque? Accusantium, quisquam exercitationem!</p>
-                <img src="images/images.jpeg">
-            </div>
-            <div class="services-col">
-                <h1> Service 2</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ullam doloribus nulla repudiandae velit autem culpa earum ut delectus necessitatibus, ad, similique molestias molestiae ex ratione neque? Accusantium, quisquam exercitationem!</p>
-                <img src="images/paint-brush-19186657.webp">
-            </div>
-            <div class="services-col">
-                <h1> Service 3</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ullam doloribus nulla repudiandae velit autem culpa earum ut delectus necessitatibus, ad, similique molestias molestiae ex ratione neque? Accusantium, quisquam exercitationem!</p>
-                <img src="images/lol.jpg">
-            </div>
+      <div class="services-text-column">
+
+        <div class="service-block">
+          <h3>Our Services</h3>
+          <p class="service-intro">
+            We specialise in high-quality industrial spray painting for both
+            commercial partners and residential projects.
+          </p>
+      
+          <ul class="service-list">
+            <li>Cabinet makers</li>
+            <li>Renovators</li>
+            <li>Joiners</li>
+            <li>Shop fit-out specialists</li>
+            <li>Home kitchen projects</li>
+          </ul>
         </div>
-    </section>
+      
+        <div class="service-block service-highlight">
+          <p><strong>Finishes:</strong> Colour coatings and clear finishes for timber veneers</p>
+        </div>
+      
+      </div>
+      
 
-    <hr color="#d9b99b" size="1px"/>
-
-    <div class="contact">
-        <h1 id="contact"> Contact us</h1>
-        <p>email@email.com</p>
+      <div class="services-image-placeholder"></div>
     </div>
+  </section>
+
+  <!-- TRUST / SOCIAL PROOF -->
+  <section class="section trust-us">
+    <div class="trust-container">
+      <h2>Trusted by Businesses Across Sydney</h2>
+      <p>
+        MB Perfect Vision is proud to work with a wide range of trusted partners,
+        delivering consistent quality, reliability, and on-time results across every project.
+      </p>
+
+      <div class="trust-logos">
+        <span>Cabinet Makers</span>
+        <span>Renovators</span>
+        <span>Joiners</span>
+        <span>Shop Fit-Out Specialists</span>
+        <span>Residential Projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-us">
+    <div class="contact-container">
+
+      <div class="contact-text">
+        <h2>Contact Us</h2>
+        <p>
+          Fill out your personal details and what you're looking for and we'll get back to you ASAP.
+        </p>
+      </div>
+
+      <div class="contact-form">
+        <form
+          class="contact-form-box"
+          action="https://formspree.io/f/xvgazwaq"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <textarea name="message" placeholder="Inquiry..." required></textarea>
+
+          <input type="hidden" name="_subject" value="New message from MB Perfect Vision">
+
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Navbar scroll -->
+  <script>
+    let lastScrollY = 0;
+    const navbar = document.querySelector(".navbar");
+  
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+  
+      // If we're at the very top, always show navbar
+      if (currentScrollY === 0) {
+        navbar.classList.remove("navbar-hidden");
+        return;
+      }
+  
+      // If scrolling down, hide navbar
+      if (currentScrollY > lastScrollY) {
+        navbar.classList.add("navbar-hidden");
+      } 
+      // If scrolling up, show navbar
+      else {
+        navbar.classList.remove("navbar-hidden");
+      }
+  
+      lastScrollY = currentScrollY;
+    });
+  </script>
+
+  <!-- Fade between different images -->
+  <script>
+    const serviceImages = [
+      "images/services-1.jpg",
+      "images/services-2.jpg"
+    ];
+
+    let currentImageIndex = 0;
+    const imageContainer = document.querySelector(".services-image-placeholder");
+
+    setInterval(() => {
+      // fade out
+      imageContainer.style.opacity = 0;
+
+      setTimeout(() => {
+        // switch image
+        currentImageIndex = (currentImageIndex + 1) % serviceImages.length;
+        imageContainer.style.backgroundImage = `url(${serviceImages[currentImageIndex]})`;
+
+        // fade in
+        imageContainer.style.opacity = 1;
+      }, 800);
+    }, 5000); // change every 5 seconds
+  </script>
+
+  
+
 </body>
-</html> 
+</html>
