@@ -1,30 +1,26 @@
-   let lastScrollY = 0;
-   let isProgrammaticScroll = false;
+   let lastScrollY = window.scrollY;
+   let disableAutoHide = false;
    
    const navbar = document.querySelector(".navbar");
    const navLinks = document.querySelectorAll(".navbar a");
    
    
-   /* Navbar show/hide on scroll */
+   /* Navbar hide/show on scroll */
    window.addEventListener("scroll", () => {
-     // Do not change navbar state during JS-driven scroll
-     if (isProgrammaticScroll) return;
+     if (disableAutoHide) return;
    
      const currentScrollY = window.scrollY;
    
-     // Always show navbar at very top (hero)
-     if (currentScrollY === 0) {
+     // Always show navbar at very top
+     if (currentScrollY <= 0) {
        navbar.classList.remove("navbar-hidden");
        lastScrollY = 0;
        return;
      }
    
-     // Hide on scroll down
      if (currentScrollY > lastScrollY) {
        navbar.classList.add("navbar-hidden");
-     }
-     // Show on scroll up
-     else {
+     } else {
        navbar.classList.remove("navbar-hidden");
      }
    
@@ -32,7 +28,7 @@
    });
    
    
-   /* Scroll on navbar button click */
+   /* Scroll to section, offset navbar */
    navLinks.forEach(link => {
      link.addEventListener("click", e => {
        const targetId = link.getAttribute("href");
@@ -43,11 +39,10 @@
        const targetSection = document.querySelector(targetId);
        if (!targetSection) return;
    
-       // Lock navbar state during scroll
-       isProgrammaticScroll = true;
+       // Freeze navbar behaviour
+       disableAutoHide = true;
        navbar.classList.remove("navbar-hidden");
    
-       // Offset only for non-home sections
        const offset = targetId === "#home" ? 0 : navbar.offsetHeight;
    
        const targetPosition =
@@ -60,16 +55,23 @@
          behavior: "smooth"
        });
    
-       // Re-enable navbar logic after scroll completes
-       setTimeout(() => {
-         isProgrammaticScroll = false;
+       // Re-enable auto-hide only after USER scrolls
+       const unlock = () => {
+         disableAutoHide = false;
          lastScrollY = window.scrollY;
-       }, 700); // must exceed scroll animation duration
+         window.removeEventListener("wheel", unlock);
+         window.removeEventListener("touchstart", unlock);
+         window.removeEventListener("keydown", unlock);
+       };
+   
+       window.addEventListener("wheel", unlock, { once: true });
+       window.addEventListener("touchstart", unlock, { once: true });
+       window.addEventListener("keydown", unlock, { once: true });
      });
    });
    
    
-   /* Services section image fading */
+   /* Services section images fading */
    const serviceImages = [
      "images/services-1.jpg",
      "images/services-2.jpg"
@@ -80,7 +82,6 @@
    
    if (imageContainer) {
      setInterval(() => {
-       // Fade out
        imageContainer.style.opacity = "0";
    
        setTimeout(() => {
@@ -90,7 +91,6 @@
          imageContainer.style.backgroundImage =
            `url(${serviceImages[currentImageIndex]})`;
    
-         // Fade in
          imageContainer.style.opacity = "1";
        }, 800);
      }, 5000);
