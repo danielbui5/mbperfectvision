@@ -95,4 +95,52 @@
        }, 800);
      }, 5000);
    }
-   
+
+
+  (function() {
+    var track = document.getElementById('reviewTrack');
+    var prevBtn = document.getElementById('reviewPrev');
+    var nextBtn = document.getElementById('reviewNext');
+    var dotsContainer = document.getElementById('reviewDots');
+    if (!track) return;
+    var cards = track.querySelectorAll('.review-card');
+    var perPage = window.innerWidth <= 768 ? 1 : 2;
+    var pages = Math.ceil(cards.length / perPage);
+    var current = 0;
+
+    for (var i = 0; i < pages; i++) {
+      var d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      (function(idx) {
+        d.addEventListener('click', function() { goTo(idx); });
+      })(i);
+      dotsContainer.appendChild(d);
+    }
+
+    function goTo(page) {
+      current = Math.max(0, Math.min(page, pages - 1));
+      var cardWidth = cards[0].offsetWidth + 16;
+      track.style.transform = 'translateX(-' + (current * perPage * cardWidth) + 'px)';
+      dotsContainer.querySelectorAll('.carousel-dot').forEach(function(dot, idx) {
+        dot.classList.toggle('active', idx === current);
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= pages - 1;
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+    var autoTimer = setInterval(function() {
+      goTo(current < pages - 1 ? current + 1 : 0);
+    }, 5000);
+
+    track.addEventListener('mouseenter', function() { clearInterval(autoTimer); });
+    track.addEventListener('mouseleave', function() {
+      autoTimer = setInterval(function() {
+        goTo(current < pages - 1 ? current + 1 : 0);
+      }, 5000);
+    });
+  })();
+  
