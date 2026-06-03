@@ -369,13 +369,13 @@
   
   .svc-desc {
     font-size: 13px;
-    color: #111;
+    color: #888;
     line-height: 1.7;
     font-weight: 300;
   }
   
   .svc.dark .svc-desc {
-    color: #555;
+    color: rgb(206, 206, 206);
   }
   
   /* ============================================
