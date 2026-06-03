@@ -4,229 +4,186 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MB Perfect Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <img src="images/logo_tranparent.png" class="logo" alt="Logo">
-    <ul>
+    <img src="images/logo_tranparent.png" class="logo" alt="MB Perfect Vision Logo">
+    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+    <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
-  <!-- HOME -->
-  <section id="home" class="section banner">
-    <div class="overlay">
-      <h1>MB Perfect Vision</h1>
-      <p>Best quality service for your industrial spray painting needs</p>
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#10005;</button>
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-tag">Industrial Spray Painting &middot; Sydney</p>
+        <h1 class="hero-title">Precision finish.<br><strong>Every time.</strong></h1>
+        <p class="hero-sub">Premium spray painting for cabinet makers, renovators, and fit-out specialists across Sydney's Northern Beaches.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-white">Get a Quote</a>
+          <a href="#services" class="btn-outline">Our Services</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT US (TEXT ONLY, CENTERED) -->
-  <section id="about" class="section about-us">
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>
-        MB Perfect Vision is a company that provides an efficient and quality 
-        spray painting service. Over time, the company has learned, developed 
-        and built a team with extensive experience and necessary skills to deliver 
-        high-quality products. Our team is dedicated to coninuous improvement and 
-        learning every day in order to better serve our customers.
-      </p>
-      <p>
-        Over the years, the company has served and earnt the trust of many business 
-        parters in the Northern Beaches area and all across Sydney.
-      </p>
-      <!-- <p>
-        Currently, we are able to serve clients such as cabinet makers, renovators, 
-        joiners, shop fit-out specialists, and resurfaced home kitchen projects, 
-        handling large volumes of work and ensuring on-time completion as required.
-      </p> -->
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-img"></div>
+    <div class="about-content">
+      <p class="eyebrow">About Us</p>
+      <h2 class="section-h">Built on craft,<br>driven by quality.</h2>
+      <p class="body-text">MB Perfect Vision is a company that provides an efficient and quality spray painting service. Over time, we have learned, developed and built a team with extensive experience and the necessary skills to deliver high-quality products.</p>
+      <p class="body-text">Over the years, we have served and earned the trust of many business partners in the Northern Beaches area and all across Sydney.</p>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Projects completed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">On-time delivery</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="section services-us">
-    <div class="services-container">
-
-      <div class="services-text-column">
-
-        <div class="service-block">
-          <h3>Our Services</h3>
-          <p class="service-intro">
-            We specialise in high-quality industrial spray painting for both
-            commercial partners and residential projects.
-          </p>
-      
-          <ul class="service-list">
-            <li>Cabinet makers</li>
-            <li>Renovators</li>
-            <li>Joiners</li>
-            <li>Shop fit-out specialists</li>
-            <li>Home kitchen projects</li>
-          </ul>
-        </div>
-      
-        <div class="service-block service-highlight">
-          <p><strong>Finishes:</strong> Colour coatings and clear finishes for timber veneers</p>
-        </div>
-      
-      </div>
-      
-
-      <div class="services-image-placeholder"></div>
+  <section id="services" class="services">
+    <div class="services-top">
+      <p class="eyebrow">What we do</p>
+      <h2 class="section-h">Our Services</h2>
     </div>
-  </section>
-
-  <!-- TRUST / SOCIAL PROOF -->
-  <section class="section trust-us">
-    <div class="trust-container">
-      <h2>Trusted by Businesses Across Sydney</h2>
-      <p>
-        MB Perfect Vision is proud to work with a wide range of trusted partners,
-        delivering consistent quality, reliability, and on-time results across every project.
-      </p>
-
-      <div class="trust-logos">
-        <span>Cabinet Makers</span>
-        <span>Renovators</span>
-        <span>Joiners</span>
-        <span>Shop Fit-Out Specialists</span>
-        <span>Residential Projects</span>
+    <div class="services-grid">
+      <div class="svc">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Cabinet Makers</div>
+        <div class="svc-desc">High-volume consistent finishes with fast turnaround for production runs.</div>
+      </div>
+      <div class="svc dark">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Renovators &amp; Joiners</div>
+        <div class="svc-desc">Colour coatings and clear finishes for renovation and joinery projects of any scale.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Shop Fit-Outs</div>
+        <div class="svc-desc">Professional commercial finishes for retail and hospitality specialists.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">04</div>
+        <div class="svc-name">Home Kitchens</div>
+        <div class="svc-desc">Resurfaced cabinetry with a flawless factory finish — no fumes at home.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">05</div>
+        <div class="svc-name">Timber Veneer</div>
+        <div class="svc-desc">Specialist clear coatings that preserve and protect natural timber beauty.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-num">06</div>
+        <div class="svc-name">Custom Colour Coatings</div>
+        <div class="svc-desc">Any colour, any substrate — matched to spec and applied with precision.</div>
       </div>
     </div>
   </section>
 
-  <!-- GOOGLE REVIEWS CAROUSEL -->
-  <!-- <section class="section reviews-us">
-    <div class="reviews-container">
-
-      <div class="reviews-header">
-        <h2>What Our Clients Say</h2>
-      </div>
-
-      <div class="carousel-wrapper">
-        <div class="carousel-track" id="reviewTrack">
-
-          <div class="review-card">
-            <div class="reviewer">
-              <div class="reviewer-avatar" style="background:#E6F1FB; color:#185FA5;">JM</div>
-              <div>
-                <div class="reviewer-name">James M.</div>
-                <div class="reviewer-date">2 months ago</div>
-              </div>
-            </div>
-            <div class="card-stars">
-              <span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span>
-            </div>
-            <p class="review-text">"Absolutely outstanding finish on our kitchen cabinetry. The team was professional, on-time, and the colour matching was perfect. Highly recommend to any cabinet maker in Sydney."</p>
-          </div>
-
-          <div class="review-card">
-            <div class="reviewer">
-              <div class="reviewer-avatar" style="background:#E1F5EE; color:#0F6E56;">SC</div>
-              <div>
-                <div class="reviewer-name">Sarah C.</div>
-                <div class="reviewer-date">3 months ago</div>
-              </div>
-            </div>
-            <div class="card-stars">
-              <span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span>
-            </div>
-            <p class="review-text">"We've used MB Perfect Vision for multiple shop fit-out projects across the Northern Beaches. Consistent quality every single time — they're our go-to spray painters without question."</p>
-          </div>
-
-          <div class="review-card">
-            <div class="reviewer">
-              <div class="reviewer-avatar" style="background:#FAEEDA; color:#854F0B;">DP</div>
-              <div>
-                <div class="reviewer-name">David P.</div>
-                <div class="reviewer-date">4 months ago</div>
-              </div>
-            </div>
-            <div class="card-stars">
-              <span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span>
-            </div>
-            <p class="review-text">"Used them for a timber veneer clear coat job — the finish was flawless. Very knowledgeable team who clearly take pride in their craft. Will use again on our next joinery project."</p>
-          </div>
-
-          <div class="review-card">
-            <div class="reviewer">
-              <div class="reviewer-avatar" style="background:#FBEAF0; color:#993556;">AK</div>
-              <div>
-                <div class="reviewer-name">Anna K.</div>
-                <div class="reviewer-date">5 months ago</div>
-              </div>
-            </div>
-            <div class="card-stars">
-              <span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span>
-            </div>
-            <p class="review-text">"Had our home kitchen resurfaced and the result is stunning. The team were tidy, fast, and the colour we chose came out exactly as expected. Couldn't be happier with the outcome."</p>
-          </div>
-
-          <div class="review-card">
-            <div class="reviewer">
-              <div class="reviewer-avatar" style="background:#EAF3DE; color:#3B6D11;">RL</div>
-              <div>
-                <div class="reviewer-name">Robert L.</div>
-                <div class="reviewer-date">6 months ago</div>
-              </div>
-            </div>
-            <div class="card-stars">
-              <span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span><span class="card-star">&#9733;</span>
-            </div>
-            <p class="review-text">"As a renovator working across Sydney, finding reliable spray painters is tough. MB Perfect Vision have been exceptional — large volumes handled with care and always delivered on time."</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="carousel-controls">
-        <button class="ctrl-btn" id="reviewPrev" aria-label="Previous reviews" disabled>&#8592;</button>
-        <div class="carousel-dots" id="reviewDots"></div>
-        <button class="ctrl-btn" id="reviewNext" aria-label="Next reviews">&#8594;</button>
-      </div>
-
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <span class="trust-label">Trusted by</span>
+    <span class="trust-div"></span>
+    <div class="trust-pills">
+      <span>Cabinet Makers</span>
+      <span>Renovators</span>
+      <span>Joiners</span>
+      <span>Shop Fit-Out Specialists</span>
+      <span>Residential Clients</span>
     </div>
-  </section> -->
+  </div>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact-us">
-    <div class="contact-container">
-
-      <div class="contact-text">
-        <h2>Contact Us</h2>
-        <p>
-          Fill out your personal details and what you're looking for and we'll get back to you ASAP.
-        </p>
+  <section id="contact" class="contact">
+    <div class="contact-left">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-h">Let's discuss<br>your project.</h2>
+      <p class="body-text">Fill out the form and we'll get back to you within one business day.</p>
+      <div class="contact-detail">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/><path d="M3 7l9 6 9-6"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val">info@mbperfectvision.com.au</div>
+        </div>
       </div>
-
-      <div class="contact-form">
-        <form
-          class="contact-form-box"
-          action="https://formspree.io/f/xvgazwaq"
-          method="POST"
-        >
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <input type="tel" name="phone" placeholder="Phone Number">
-          <textarea name="message" placeholder="Inquiry..." required></textarea>
-
-          <input type="hidden" name="_subject" value="New message from MB Perfect Vision">
-
-          <button type="submit" class="submit-button">Submit</button>
-        </form>
+      <div class="contact-detail">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Location</div>
+          <div class="c-val">Northern Beaches, Sydney NSW</div>
+        </div>
       </div>
-
+    </div>
+    <div class="contact-right">
+      <form action="https://formspree.io/f/xvgazwaq" method="POST" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input class="form-input" type="text" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" name="email" placeholder="john@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input class="form-input" type="tel" name="phone" placeholder="04XX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Enquiry</label>
+          <textarea class="form-input form-textarea" name="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New enquiry from MB Perfect Vision">
+        <button type="submit" class="submit-btn">Send Enquiry</button>
+      </form>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">MB Perfect Vision</div>
+    <div class="footer-copy">&copy; 2025 MB Perfect Vision &middot; Northern Beaches, Sydney</div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
