@@ -423,38 +423,66 @@
      CONTACT
      ============================================ */
   .contact {
-    display: flex;
-    flex-direction: row-reverse;
-    min-height: 100vh;
-    background: #f8f8f8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
   }
   
   .contact-left {
-    flex: 1;
     padding: 80px 64px;
+    background: #f8f8f8;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-right: 1px solid #ebebeb;
   }
   
   .contact-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 40px;
+    padding: 80px 64px;
+    background: #fff;
   }
   
   .contact-form {
-    width: 100%;
-    max-width: 480px;
-    background: #fff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    gap: 0;
+  }
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+  }
+  
+  .c-icon {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #999;
+  }
+  
+  .c-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .c-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 2px;
+  }
+  
+  .c-val {
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
   }
   
   .form-row {
@@ -464,7 +492,7 @@
   }
   
   .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   
   .form-label {
@@ -479,10 +507,10 @@
   
   .form-input {
     width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #000;
-    border-radius: 8px;
-    background: #fff;
+    padding: 11px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: #fafafa;
     font-family: 'Sora', sans-serif;
     font-size: 13px;
     color: #111;
@@ -492,12 +520,14 @@
   }
   
   .form-input:focus {
-    border-color: #555;
+    border-color: #aaa;
+    background: #fff;
   }
   
   .form-textarea {
-    min-height: 120px;
+    min-height: 110px;
     resize: vertical;
+    border-radius: 16px;
   }
   
   .submit-btn {
@@ -621,23 +651,21 @@
   
     /* contact */
     .contact {
-      flex-direction: column;
-      min-height: auto;
+      grid-template-columns: 1fr;
     }
   
     .contact-left {
-      padding: 56px 28px 32px;
+      padding: 56px 28px 40px;
+      border-right: none;
+      border-bottom: 1px solid #ebebeb;
     }
   
     .contact-right {
-      padding: 0 28px 64px;
-      justify-content: flex-start;
+      padding: 40px 28px 64px;
     }
   
-    .contact-form {
-      max-width: 100%;
-      padding: 28px 24px;
-      border-radius: 12px;
+    .form-row {
+      grid-template-columns: 1fr;
     }
   
     /* footer */
